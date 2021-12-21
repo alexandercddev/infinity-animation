@@ -1,0 +1,57 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #2d3034;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box > div.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 40px solid rgba(35, 39, 42, 0.5);
+  border-radius: 50%;
+}
+.box > div.dot {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(0%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #c601e4;
+  box-shadow: 0px 0px 25px #c601e4;
+  transform-origin: 100px 50%;
+  animation: animateDot 4s linear infinite;
+}
+.box > div.dot:hover {
+  cursor: pointer;
+}
+
+@keyframes animateDot {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

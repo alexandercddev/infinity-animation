@@ -1,0 +1,68 @@
+
+$color-b-body: hsl(214, 7%, 19%);
+$color-b-circle: hsla(206, 9%, 15%, 0.5);
+$color-purple: hsl(292, 99%, 45%); 
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: $color-b-body;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box { 
+    position: relative;
+    width: 200px;
+    height: 200px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &>div.circle { 
+        position: relative;
+        width: 200px;
+        height: 200px;  
+        border: 40px solid $color-b-circle;
+        border-radius: 50%;
+    } 
+
+    &>div.dot { 
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-0%);
+        width: 40px;
+        height: 40px;   
+        border-radius: 50%;
+        background-color: $color-purple;
+        box-shadow: 0px 0px 25px $color-purple;
+        transform-origin: 100px 50%;
+        animation: animateDot 4s linear infinite;
+
+        &:hover {
+            cursor: pointer;
+        }
+    } 
+}
+
+@keyframes animateDot {
+    0% {
+        transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 450px) {
+     
+}
